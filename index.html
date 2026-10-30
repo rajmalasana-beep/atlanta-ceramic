@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Ceramic — Premium Vitrified Tiles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f8f6f3;
+            --navy: #1a365d;
+            --gold: #c4a574;
+            --text: #1a365d;
+            --text-muted: #5a6a7a;
+            --border: rgba(26, 54, 93, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        nav { position: fixed; top: 0; width: 100%; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        .logo { height: 40px; }
+        .logo img { height: 100%; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.5px; text-transform: uppercase; }
+        .hero { height: 90vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%); text-align: center; padding: 0 5%; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem); margin-bottom: 1rem; color: var(--navy); }
+        .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem; }
+        .cta { display: inline-block; padding: 0.9rem 2.2rem; background: var(--navy); color: #fff; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem; }
+        section { padding: 5rem 5%; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); text-align: center; margin-bottom: 1rem; }
+        .section-title span { color: var(--gold); }
+        .subtitle { text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 2.5rem; }
+        .size-filters { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .size-btn { padding: 0.6rem 1.4rem; background: transparent; border: 1px solid var(--navy); color: var(--navy); border-radius: 30px; cursor: pointer; font-size: 0.85rem; }
+        .size-btn.active, .size-btn:hover { background: var(--navy); color: #fff; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .product-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { width: 100%; height: 260px; object-fit: cover; }
+        .product-info { padding: 1.2rem; }
+        .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.3rem; }
+        .product-info p { color: var(--text-muted); font-size: 0.9rem; }
+        .about { background: var(--bg-secondary); text-align: center; }
+        .about p { max-width: 750px; margin: 1rem auto 0; color: var(--text-muted); }
+        footer { background: var(--navy); color: #fff; text-align: center; padding: 2.5rem 5%; }
+        footer a { color: var(--gold); text-decoration: none; }
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); }
+        .whatsapp-btn svg { width: 28px; height: 28px; fill: #fff; }
+        @media (max-width: 768px) { .nav-links { display: none; } .hero { height: auto; padding: 6rem 5% 3rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="images/atlanta-logo.png" alt="Atlanta Ceramic"></div>
+        <ul class="nav-links">
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div>
+            <h1>Atlanta<br><span style="color: var(--gold);">Ceramic</span></h1>
+            <p>Leading manufacturer of premium vitrified tiles. Elegant designs, superior finishes, and timeless quality for modern interiors.</p>
+            <a href="#collections" class="cta">Explore Collections</a>
+        </div>
+    </section>
+    <section id="collections">
+        <h2 class="section-title">Our <span>Collections</span></h2>
+        <p class="subtitle">Premium tiles organized by size and finish. Select a size to explore surfaces.</p>
+        <div class="size-filters">
+            <button class="size-btn active" data-size="600x1200">600x1200mm</button>
+            <button class="size-btn" data-size="600x600">600x600mm</button>
+            <button class="size-btn" data-size="300x450">300x450mm (Wall)</button>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-01.png" alt="Glossy Finish"><div class="product-info"><h3>Glossy Finish</h3><p>600x1200mm · High shine marble look</p></div></div>
+            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-03.png" alt="Matt Finish"><div class="product-info"><h3>Matt Finish</h3><p>600x1200mm · Soft matte surface</p></div></div>
+            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-04.png" alt="High Glossy"><div class="product-info"><h3>High Glossy</h3><p>600x1200mm · Premium gloss</p></div></div>
+            <div class="product-card" data-size="600x1200"><img src="images/fish-01.png" alt="Carving"><div class="product-info"><h3>Carving Finish</h3><p>600x1200mm · Textured surface</p></div></div>
+            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-05.png" alt="Sugar"><div class="product-info"><h3>Sugar Finish</h3><p>600x1200mm · Fine texture</p></div></div>
+            <div class="product-card" data-size="600x600"><img src="images/3d_glossy-02.png" alt="Double Charge"><div class="product-info"><h3>Double Charge</h3><p>600x600mm · Glossy</p></div></div>
+            <div class="product-card" data-size="600x600"><img src="images/craft-01.png" alt="Porcelain Matt"><div class="product-info"><h3>Porcelain · Matt</h3><p>600x600mm · Soft matte</p></div></div>
+            <div class="product-card" data-size="600x600"><img src="images/craft-02.png" alt="Porcelain Sugar"><div class="product-info"><h3>Porcelain · Sugar</h3><p>600x600mm · Fine texture</p></div></div>
+            <div class="product-card" data-size="600x600"><img src="images/craft-03.png" alt="Porcelain Carving"><div class="product-info"><h3>Porcelain · Carving</h3><p>600x600mm · Textured</p></div></div>
+            <div class="product-card" data-size="300x450"><img src="images/3d_glossy-06.png" alt="Elevation"><div class="product-info"><h3>Elevation</h3><p>300x450mm · Wall Tiles</p></div></div>
+            <div class="product-card" data-size="300x450"><img src="images/fish-02.png" alt="Kitchen"><div class="product-info"><h3>Kitchen</h3><p>300x450mm · Wall Tiles</p></div></div>
+            <div class="product-card" data-size="300x450"><img src="images/fish-03.png" alt="Bathroom"><div class="product-info"><h3>Bathroom</h3><p>300x450mm · Wall Tiles</p></div></div>
+            <div class="product-card" data-size="300x450"><img src="images/3d_glossy-01.png" alt="Pooja Room"><div class="product-info"><h3>Pooja Room</h3><p>300x450mm · Wall Tiles</p></div></div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2 class="section-title">About <span>Atlanta Ceramic</span></h2>
+        <p>We are a leading manufacturer of premium vitrified tiles from Morbi. Our collections are designed for modern interiors with superior finishes, durability, and elegant aesthetics. From glossy marble looks to textured carving and matte surfaces, we deliver quality that meets global standards.</p>
+    </section>
+    <footer id="contact">
+        <p><strong>Atlanta Ceramic</strong></p>
+        <p>612, Latest Business Center, Mahendranagar Chokdi, Morbi, 363642</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">© 2026 Atlanta Ceramic. All rights reserved.</p>
+    </footer>
+    <a href="https://wa.me/message/M6XCNKRZM4KQG1" class="whatsapp-btn" target="_blank" aria-label="WhatsApp Chat">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <script>
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        function filterBySize(size) {
+            productCards.forEach(card => {
+                card.style.display = (card.dataset.size === size) ? 'block' : 'none';
+            });
+        }
+        filterBySize('600x1200');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterBySize(btn.dataset.size);
+            });
+        });
+    </script>
+</body>
+</html>
