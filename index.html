@@ -5,122 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlanta Ceramic | Premium Tiles Manufacturer | Morbi</title>
     <meta name="description" content="Atlanta Ceramic – Premium GVT, Porcelain, Double Charge & Wall Tiles from Morbi. 600x1200, 600x600, 300x450mm. Glossy, Matt, Carving, Sugar finishes.">
+    <meta name="theme-color" content="#081123">
+    <link rel="icon" type="image/png" href="images/atlanta-logo.png">
+    <script>
+        /* Motion gate: content is never hidden by CSS. If main.js does not finish within 4s, all effects switch off. */
+        (function(d){var r=d.documentElement;r.classList.add('js');
+        if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('rm');
+        setTimeout(function(){if(!window.__acReady){r.classList.remove('js');r.classList.add('nofx');}},4000);})(document);
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --bg-soft: #f5f5f7;
-            --navy: #1d1d1f;
-            --accent: #86868b;
-            --gold: #c4a574;
-            --text: #1d1d1f;
-            --muted: #6e6e73;
-            --border: rgba(0,0,0,0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        nav { position: fixed; top: 0; width: 100%; padding: 0.75rem 6%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--border); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.5px; color: var(--navy); }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a { color: var(--text); text-decoration: none; font-size: 0.85rem; font-weight: 500; opacity: 0.85; transition: opacity 0.2s; }
-        .nav-links a:hover { opacity: 1; }
-        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 6% 4rem; background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%); }
-        .hero-inner { max-width: 860px; animation: fadeUp 1.2s ease-out; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.2rem); font-weight: 700; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 1.2rem; }
-        .hero h1 span { display: block; font-size: 0.45em; font-weight: 400; letter-spacing: 3px; color: var(--muted); margin-top: 0.4rem; text-transform: uppercase; }
-        .hero p { font-size: 1.25rem; color: var(--muted); max-width: 640px; margin: 0 auto 2.2rem; font-weight: 400; }
-        .cta { display: inline-block; padding: 0.85rem 2rem; background: var(--navy); color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 500; border-radius: 980px; transition: transform 0.3s, background 0.3s; }
-        .cta:hover { transform: scale(1.04); background: #000; }
-        section { padding: 6rem 6%; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); text-align: center; letter-spacing: -1px; margin-bottom: 0.6rem; }
-        .subtitle { text-align: center; color: var(--muted); max-width: 680px; margin: 0 auto 3rem; font-size: 1.1rem; }
-        .filters { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 3rem; }
-        .filter-btn { padding: 0.6rem 1.4rem; background: transparent; border: 1px solid var(--border); color: var(--text); border-radius: 980px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
-        .filter-btn.active, .filter-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; max-width: 1280px; margin: 0 auto; }
-        .card { background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .card img { width: 100%; height: 280px; object-fit: cover; background: #f5f5f7; transition: transform 0.6s; }
-        .card:hover img { transform: scale(1.04); }
-        .card-info { padding: 1.4rem 1.3rem 1.6rem; }
-        .card-info h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 0.3rem; letter-spacing: -0.3px; }
-        .card-info p { color: var(--muted); font-size: 0.95rem; }
-        .about { background: var(--bg-soft); }
-        .about-wrap { max-width: 1000px; margin: 0 auto; text-align: center; }
-        .about p { color: var(--muted); font-size: 1.1rem; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
-        .why { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 2rem auto 0; }
-        .why-item { background: #fff; padding: 2rem 1.5rem; border-radius: 16px; border: 1px solid var(--border); text-align: center; }
-        .why-item h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.5rem; }
-        footer { background: #1d1d1f; color: #f5f5f7; text-align: center; padding: 4rem 6% 2.5rem; }
-        footer h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.6rem; }
-        footer a { color: var(--gold); text-decoration: none; }
-        .whatsapp { position: fixed; bottom: 24px; right: 24px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.3s; }
-        .whatsapp:hover { transform: scale(1.08); }
-        .whatsapp svg { width: 32px; height: 32px; fill: #fff; }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 768px) { .nav-links { display: none; } .hero { min-height: auto; padding-top: 7rem; } .grid { grid-template-columns: 1fr; } }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">Atlanta Ceramic</div>
+    <!-- Intro preloader (auto-hides via CSS even if JS fails) -->
+    <div class="preloader" aria-hidden="true">
+        <div class="pl-word">Atlanta&nbsp;Ceramic</div>
+        <div class="pl-sub">Premium Tiles · Morbi</div>
+        <div class="pl-bar"><i></i></div>
+        <div class="pl-count">0</div>
+    </div>
+
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <div class="cursor" aria-hidden="true"><b>View</b></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <nav class="nav">
+        <a href="#top" class="logo" aria-label="Atlanta Ceramic – home"><img src="images/atlanta-logo.png" alt="Atlanta Ceramic" width="600" height="167"></a>
+        <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
         <ul class="nav-links">
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#collections"><span class="t" data-t="Collections">Collections</span></a></li>
+            <li><a href="#about"><span class="t" data-t="About">About</span></a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-lines"></div>
+            <div class="glow g1"></div>
+            <div class="glow g2"></div>
+            <div class="grain"></div>
+        </div>
         <div class="hero-inner">
-            <h1>Atlanta Ceramic<span>Premium Tiles from Morbi</span></h1>
-            <p>Manufacturer & Exporter of high-quality Glazed Vitrified Tiles, Porcelain, Double Charge and Wall Tiles. Designed for modern living with lasting elegance.</p>
-            <a href="#collections" class="cta">Explore Collections</a>
+            <div class="hero-copy">
+                <span class="eyebrow r-hero">Morbi · Gujarat · India</span>
+                <h1 class="hero-title"><span class="ln"><span>Atlanta</span></span> <span class="ln it"><span>Ceramic</span></span><span class="sub r-hero">Premium Tiles from Morbi</span></h1>
+                <p class="lead r-hero">Manufacturer &amp; Exporter of high-quality Glazed Vitrified Tiles, Porcelain, Double Charge and Wall Tiles. Designed for modern living with lasting elegance.</p>
+                <div class="hero-ctas r-hero">
+                    <a href="#collections" class="cta magnetic">Explore Collections <span class="arr">→</span></a>
+                    <a href="https://wa.me/message/M6XCNKRZM4KQG1" target="_blank" rel="noopener" class="cta ghost magnetic">WhatsApp Inquiry</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <figure class="hv hv1"><img src="images/600x1200/High_Glossy.jpg" alt=""><figcaption>High Glossy · 600×1200</figcaption></figure>
+                <figure class="hv hv3"><img src="images/600x600-dc/GALAXY_SERIES.jpg" alt=""></figure>
+                <figure class="hv hv2"><img src="images/600x600-porc/BOOK_MATCH.jpg" alt=""><figcaption>Book Match · Porcelain</figcaption></figure>
+                <div class="hero-badge">
+                    <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text font-size="8.6" letter-spacing="3.2" fill="#e7cba5" font-family="Inter, sans-serif"><textPath href="#circ">PREMIUM TILES · MADE IN MORBI · </textPath></text></svg>
+                    <b>AC</b>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <div class="marquee" aria-label="Glazed Vitrified Tiles, Double Charge, Porcelain, Wall Tiles, High Glossy, Matt, Carving, Sugar">
+        <div class="mq-track" aria-hidden="true">
+            <span>Glazed Vitrified</span><span>Double Charge</span><span>Porcelain</span><span>Wall Tiles</span><span>High Glossy</span><span>Matt</span><span>Carving</span><span>Sugar</span>
+            <span class="dup">Glazed Vitrified</span><span class="dup">Double Charge</span><span class="dup">Porcelain</span><span class="dup">Wall Tiles</span><span class="dup">High Glossy</span><span class="dup">Matt</span><span class="dup">Carving</span><span class="dup">Sugar</span>
+        </div>
+    </div>
+
+    <section id="collections">
+        <span class="kicker reveal">The Range</span>
+        <h2 class="section-title split">Our Collections</h2>
+        <p class="subtitle reveal">Premium tiles organised by size and finish. Select a category to explore surfaces.</p>
+        <div class="filters reveal" role="tablist" aria-label="Tile categories">
+            <button class="filter-btn active" data-size="600x1200" role="tab" aria-selected="true">600×1200 mm</button>
+            <button class="filter-btn" data-size="600x600-dc" role="tab" aria-selected="false">600×600 Double Charge</button>
+            <button class="filter-btn" data-size="600x600-porc" role="tab" aria-selected="false">600×600 Porcelain</button>
+            <button class="filter-btn" data-size="300x450" role="tab" aria-selected="false">300×450 Wall</button>
+        </div>
+        <div class="grid" id="productGrid" role="tabpanel">
+            <!-- Static default (600×1200) so products show even without JavaScript -->
+            <article class="card"><div class="card-media"><img src="images/600x1200/Glossy.jpg" alt="Glossy Finish" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">01</span><div><h3>Glossy Finish</h3><p>600×1200 mm · High-shine marble look</p></div></div></article>
+            <article class="card"><div class="card-media"><img src="images/600x1200/MATT.jpg" alt="Matt Finish" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">02</span><div><h3>Matt Finish</h3><p>600×1200 mm · Soft matte surface</p></div></div></article>
+            <article class="card"><div class="card-media"><img src="images/600x1200/High_Glossy.jpg" alt="High Glossy" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">03</span><div><h3>High Glossy</h3><p>600×1200 mm · Mirror-like gloss</p></div></div></article>
+            <article class="card"><div class="card-media"><img src="images/600x1200/CARVING.jpg" alt="Carving Finish" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">04</span><div><h3>Carving Finish</h3><p>600×1200 mm · Textured surface</p></div></div></article>
+            <article class="card"><div class="card-media"><img src="images/600x1200/DECOR.jpg" alt="Decor" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">05</span><div><h3>Decor</h3><p>600×1200 mm · Decorative designs</p></div></div></article>
         </div>
     </section>
 
-    <section id="collections">
-        <h2 class="section-title">Our Collections</h2>
-        <p class="subtitle">Premium tiles organised by size and finish. Select a category to explore surfaces.</p>
-        <div class="filters">
-            <button class="filter-btn active" data-size="600x1200">600×1200 mm</button>
-            <button class="filter-btn" data-size="600x600-dc">600×600 Double Charge</button>
-            <button class="filter-btn" data-size="600x600-porc">600×600 Porcelain</button>
-            <button class="filter-btn" data-size="300x450">300×450 Wall</button>
+    <section class="ribbon" aria-label="Tile designs in real spaces">
+        <span class="kicker reveal">Surfaces in Spaces</span>
+        <h2 class="section-title split">Designed for <em>modern living</em></h2>
+        <div class="rb-row r1">
+            <figure><img src="images/600x1200/Glossy.jpg" alt="Glossy Finish room" loading="lazy"></figure>
+            <figure><img src="images/600x600-dc/ALPS_SERIES.jpg" alt="Alps Series room" loading="lazy"></figure>
+            <figure><img src="images/600x600-porc/GALICHA.jpg" alt="Galicha room" loading="lazy"></figure>
+            <figure><img src="images/300x450/KITCHEN.jpg" alt="Kitchen wall tiles" loading="lazy"></figure>
+            <figure><img src="images/600x1200/CARVING.jpg" alt="Carving Finish room" loading="lazy"></figure>
+            <figure><img src="images/600x600-dc/PENDORA_SERIES.jpg" alt="Pendora Series room" loading="lazy"></figure>
+            <figure><img src="images/600x600-porc/TERRAZZO.jpg" alt="Terrazzo room" loading="lazy"></figure>
+            <figure><img src="images/300x450/ELEVATION.jpg" alt="Elevation wall tiles" loading="lazy"></figure>
+            <figure><img src="images/600x1200/DECOR.jpg" alt="Decor room" loading="lazy"></figure>
         </div>
-        <div class="grid" id="productGrid"></div>
+        <div class="rb-row r2">
+            <figure><img src="images/600x600-porc/SUGAR.jpg" alt="Sugar Finish room" loading="lazy"></figure>
+            <figure><img src="images/300x450/BATHROOM_TILES.jpg" alt="Bathroom wall tiles" loading="lazy"></figure>
+            <figure><img src="images/600x1200/MATT.jpg" alt="Matt Finish room" loading="lazy"></figure>
+            <figure><img src="images/600x600-dc/CRETA_SEEIES.jpg" alt="Creta Series room" loading="lazy"></figure>
+            <figure><img src="images/600x600-porc/PERSIAN_CARVING.jpg" alt="Persian Carving room" loading="lazy"></figure>
+            <figure><img src="images/300x450/Wallpaper.jpg" alt="Wallpaper wall tiles" loading="lazy"></figure>
+            <figure><img src="images/600x1200/High_Glossy.jpg" alt="High Glossy room" loading="lazy"></figure>
+            <figure><img src="images/600x600-dc/GALAXY_SERIES.jpg" alt="Galaxy Series room" loading="lazy"></figure>
+            <figure><img src="images/600x600-porc/BOOK_MATCH.jpg" alt="Book Match room" loading="lazy"></figure>
+        </div>
     </section>
 
     <section id="about" class="about">
         <div class="about-wrap">
-            <h2 class="section-title">About Atlanta Ceramic</h2>
-            <p>Atlanta Ceramic is a trusted manufacturer and exporter of premium ceramic and vitrified tiles based in Morbi, the ceramic capital of India. We specialise in Glazed Vitrified Tiles (GVT/PGVT), Double Charge, Porcelain and high-quality Wall Tiles.</p>
-            <p>Our products are known for durability, low water absorption, elegant designs and consistent quality that meets international standards. From glossy marble looks to textured carving and soft matt finishes, we offer solutions for every modern interior and commercial project.</p>
-            <p>Located at 612, Latest Business Center, Mahendranagar Chokdi, Morbi – 363642.</p>
+            <span class="kicker reveal">Who We Are</span>
+            <h2 class="section-title split">About Atlanta Ceramic</h2>
+            <p class="lit">Atlanta Ceramic is a trusted manufacturer and exporter of premium ceramic and vitrified tiles based in Morbi, the ceramic capital of India. We specialise in Glazed Vitrified Tiles (GVT/PGVT), Double Charge, Porcelain and high-quality Wall Tiles.</p>
+            <p class="reveal">Our products are known for durability, low water absorption, elegant designs and consistent quality that meets international standards. From glossy marble looks to textured carving and soft matt finishes, we offer solutions for every modern interior and commercial project.</p>
+            <p class="reveal">Located at 612, Latest Business Center, Mahendranagar Chokdi, Morbi – 363642.</p>
+            <ul class="stats stagger">
+                <li><b><span class="count" data-to="4">4</span></b><span>Size Categories</span></li>
+                <li><b><span class="count" data-to="18">18</span><sup>+</sup></b><span>Signature Designs</span></li>
+                <li><b><span class="count" data-to="3">3</span></b><span>Formats in mm</span></li>
+            </ul>
         </div>
-        <div class="why">
-            <div class="why-item"><h4>Premium Quality</h4><p>Strict quality control with high strength and stain resistance in every tile.</p></div>
-            <div class="why-item"><h4>Wide Range</h4><p>600×1200, 600×600 Double Charge & Porcelain, 300×450 Wall tiles.</p></div>
-            <div class="why-item"><h4>Modern Designs</h4><p>Marble, stone and contemporary looks with advanced digital technology.</p></div>
-            <div class="why-item"><h4>Export Ready</h4><p>Reliable manufacturer serving projects across India and global markets.</p></div>
+        <div class="why stagger">
+            <div class="why-item"><span class="num">01</span><h4>Premium Quality</h4><p>Strict quality control with high strength and stain resistance in every tile.</p></div>
+            <div class="why-item"><span class="num">02</span><h4>Wide Range</h4><p>600×1200, 600×600 Double Charge &amp; Porcelain, 300×450 Wall tiles.</p></div>
+            <div class="why-item"><span class="num">03</span><h4>Modern Designs</h4><p>Marble, stone and contemporary looks with advanced digital technology.</p></div>
+            <div class="why-item"><span class="num">04</span><h4>Export Ready</h4><p>Reliable manufacturer serving projects across India and global markets.</p></div>
         </div>
     </section>
 
     <footer id="contact">
-        <h3>Atlanta Ceramic</h3>
-        <p>612, Latest Business Center, Mahendranagar Chokdi, Morbi – 363642, Gujarat, India</p>
-        <p style="margin-top:0.8rem;"><a href="https://wa.me/message/M6XCNKRZM4KQG1" target="_blank">WhatsApp Inquiry</a></p>
-        <p style="margin-top:1.5rem; opacity:0.7; font-size:0.9rem;">© 2026 Atlanta Ceramic. All rights reserved.</p>
+        <a href="#top" class="f-logo reveal" aria-label="Back to top"><img src="images/atlanta-logo-light.png" alt="Atlanta Ceramic" width="600" height="167" loading="lazy"></a>
+        <h3 class="split">Atlanta <em>Ceramic</em></h3>
+        <p class="reveal">612, Latest Business Center, Mahendranagar Chokdi, Morbi – 363642, Gujarat, India</p>
+        <p class="reveal"><a href="https://wa.me/message/M6XCNKRZM4KQG1" target="_blank" rel="noopener" class="cta f-wa magnetic">WhatsApp Inquiry <span class="arr">→</span></a></p>
+        <div class="f-copy"><p>© 2026 Atlanta Ceramic. All rights reserved.</p><button class="to-top" type="button">Back to top ↑</button></div>
     </footer>
 
-    <a href="https://wa.me/message/M6XCNKRZM4KQG1" class="whatsapp" target="_blank" aria-label="WhatsApp">
+    <div class="lb" role="dialog" aria-modal="true" aria-label="Tile preview">
+        <button class="lb-close" aria-label="Close preview">×</button>
+        <figure><img src="" alt=""><figcaption></figcaption></figure>
+    </div>
+
+    <a href="https://wa.me/message/M6XCNKRZM4KQG1" class="whatsapp magnetic" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
+        /* Core catalogue + tabs: works with or without the animation libraries */
         const products = {
             '600x1200': [
                 { img: 'images/600x1200/Glossy.jpg', name: 'Glossy Finish', desc: '600×1200 mm · High-shine marble look' },
@@ -155,22 +199,31 @@
 
         function render(size) {
             grid.innerHTML = '';
-            (products[size] || []).forEach(p => {
-                const card = document.createElement('div');
+            (products[size] || []).forEach((p, i) => {
+                const card = document.createElement('article');
                 card.className = 'card';
-                card.innerHTML = `<img src="${p.img}" alt="${p.name}" loading="lazy"><div class="card-info"><h3>${p.name}</h3><p>${p.desc}</p></div>`;
+                card.innerHTML = `<div class="card-media"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="view" aria-hidden="true">↗</span></div><div class="card-info"><span class="card-idx">${String(i + 1).padStart(2, '0')}</span><div><h3>${p.name}</h3><p>${p.desc}</p></div></div>`;
                 grid.appendChild(card);
             });
+            document.dispatchEvent(new CustomEvent('ac:rendered', { detail: { size } }));
         }
+        window.acRender = render;
 
-        render('600x1200');
         btns.forEach(btn => {
             btn.addEventListener('click', () => {
-                btns.forEach(b => b.classList.remove('active'));
+                if (btn.classList.contains('active')) return;
+                btns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
                 btn.classList.add('active');
-                render(btn.dataset.size);
+                btn.setAttribute('aria-selected', 'true');
+                document.dispatchEvent(new CustomEvent('ac:tab', { detail: { btn } }));
+                /* main.js may take over the transition; otherwise render immediately */
+                if (!window.acAnimatedTabs) render(btn.dataset.size);
             });
         });
     </script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src="js/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
