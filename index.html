@@ -44,7 +44,7 @@
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.6rem; max-width: 1240px; margin: 0 auto; }
         .product-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
         .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(26,54,93,0.08); }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; background: #f0f0f0; }
+        .product-card img { width: 100%; height: 340px; object-fit: cover; background: #f0f0f0; }
         .product-info { padding: 1.3rem 1.2rem 1.4rem; }
         .product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 0.35rem; }
         .product-info p { color: var(--text-muted); font-size: 0.92rem; }
@@ -88,28 +88,21 @@
 
     <section id="collections">
         <h2 class="section-title">Our <span>Collections</span></h2>
-        <p class="subtitle">Premium tiles in popular sizes with multiple surface finishes. Select a size to view available surfaces.</p>
+        <p class="subtitle">Large-format 600×1200 mm tiles in three signature collections. Select a collection to explore.</p>
         <div class="size-filters">
-            <button class="size-btn active" data-size="600x1200">600×1200 mm</button>
-            <button class="size-btn" data-size="600x600">600×600 mm</button>
-            <button class="size-btn" data-size="300x450">300×450 mm Wall</button>
+            <button class="size-btn active" data-size="all">All</button>
+            <button class="size-btn" data-size="3d">3D Collection</button>
+            <button class="size-btn" data-size="craft">Craft Collection</button>
+            <button class="size-btn" data-size="fish">Fish Collection</button>
         </div>
         <div class="product-grid">
-            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-01.png" alt="Glossy Finish"><div class="product-info"><h3>Glossy Finish</h3><p>600×1200 mm · High-shine marble look · Easy to clean</p></div></div>
-            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-03.png" alt="Matt Finish"><div class="product-info"><h3>Matt Finish</h3><p>600×1200 mm · Soft matte surface · Anti-slip & elegant</p></div></div>
-            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-04.png" alt="High Glossy"><div class="product-info"><h3>High Glossy</h3><p>600×1200 mm · Mirror-like gloss · Premium GVT</p></div></div>
-            <div class="product-card" data-size="600x1200"><img src="images/fish-01.png" alt="Carving"><div class="product-info"><h3>Carving Finish</h3><p>600×1200 mm · Textured surface · Unique design</p></div></div>
-            <div class="product-card" data-size="600x1200"><img src="images/3d_glossy-05.png" alt="Sugar"><div class="product-info"><h3>Sugar Finish</h3><p>600×1200 mm · Fine crystalline texture</p></div></div>
-
-            <div class="product-card" data-size="600x600"><img src="images/3d_glossy-02.png" alt="Double Charge"><div class="product-info"><h3>Double Charge</h3><p>600×600 mm · High strength glossy · Heavy traffic</p></div></div>
-            <div class="product-card" data-size="600x600"><img src="images/craft-01.png" alt="Porcelain Matt"><div class="product-info"><h3>Porcelain · Matt</h3><p>600×600 mm · Soft matte · Durable & stain resistant</p></div></div>
-            <div class="product-card" data-size="600x600"><img src="images/craft-02.png" alt="Porcelain Sugar"><div class="product-info"><h3>Porcelain · Sugar</h3><p>600×600 mm · Fine texture · Modern look</p></div></div>
-            <div class="product-card" data-size="600x600"><img src="images/craft-03.png" alt="Porcelain Carving"><div class="product-info"><h3>Porcelain · Carving</h3><p>600×600 mm · Textured surface</p></div></div>
-
-            <div class="product-card" data-size="300x450"><img src="images/3d_glossy-06.png" alt="Elevation"><div class="product-info"><h3>Elevation</h3><p>300×450 mm · Wall Tiles · Outdoor & facade look</p></div></div>
-            <div class="product-card" data-size="300x450"><img src="images/fish-02.png" alt="Kitchen"><div class="product-info"><h3>Kitchen</h3><p>300×450 mm · Wall Tiles · Easy clean surface</p></div></div>
-            <div class="product-card" data-size="300x450"><img src="images/fish-03.png" alt="Bathroom"><div class="product-info"><h3>Bathroom</h3><p>300×450 mm · Wall Tiles · Water resistant</p></div></div>
-            <div class="product-card" data-size="300x450"><img src="images/3d_glossy-01.png" alt="Pooja Room"><div class="product-info"><h3>Pooja Room</h3><p>300×450 mm · Wall Tiles · Elegant & pure look</p></div></div>
+            <div class="product-card" data-size="3d"><img src="images/tile-3d_glossy-01.jpg" alt="3D Glossy" loading="lazy"><div class="product-info"><h3>3D Glossy</h3><p>600×1200 mm · Glossy 3D surface with a premium marble look for modern living rooms.</p></div></div>
+            <div class="product-card" data-size="3d"><img src="images/tile-3d_glossy-03.jpg" alt="3D Designer Series" loading="lazy"><div class="product-info"><h3>3D Designer Series</h3><p>600×1200 mm · Raised 3D patterns in hexagon, wave and floral designs.</p></div></div>
+            <div class="product-card" data-size="3d"><img src="images/tile-3d_glossy-04.jpg" alt="3D Wall Highlighter" loading="lazy"><div class="product-info"><h3>3D Wall Highlighter</h3><p>600×1200 mm · Embossed geometric and floral designs for feature walls.</p></div></div>
+            <div class="product-card" data-size="craft"><img src="images/tile-craft-01.jpg" alt="Craft Hexa Wood" loading="lazy"><div class="product-info"><h3>Craft Hexa Wood</h3><p>600×1200 mm · Hexagon wooden mosaic look with a rich natural finish.</p></div></div>
+            <div class="product-card" data-size="craft"><img src="images/tile-craft-03.jpg" alt="Craft Wood Lines" loading="lazy"><div class="product-info"><h3>Craft Wood Lines</h3><p>600×1200 mm · Natural wood grain textures in stripe and chevron patterns.</p></div></div>
+            <div class="product-card" data-size="fish"><img src="images/tile-fish-01.jpg" alt="Fish Ocean View" loading="lazy"><div class="product-info"><h3>Fish Ocean View</h3><p>600×1200 mm · Seaside digital print that brings the ocean into your space.</p></div></div>
+            <div class="product-card" data-size="fish"><img src="images/tile-fish-03.jpg" alt="Fish Underwater" loading="lazy"><div class="product-info"><h3>Fish Underwater</h3><p>600×1200 mm · Colourful fish and coral designs for bathrooms and pool walls.</p></div></div>
         </div>
     </section>
 
@@ -122,7 +115,7 @@
                 <p>Located at 612, Latest Business Center, Mahendranagar Chokdi, Morbi – 363642, we serve domestic markets and export to multiple countries with reliable quality and timely delivery.</p>
             </div>
             <div>
-                <img src="images/atlanta-logo.png" alt="Atlanta Ceramic" style="max-width:100%; height:auto; border-radius:8px; background:#fff; padding:2rem; border:1px solid var(--border);">
+                <img src="images/tile-3d_glossy-03.jpg" alt="Atlanta Ceramic 3D tiles" style="width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12);">
             </div>
         </div>
     </section>
@@ -132,7 +125,7 @@
         <p class="subtitle">Quality, consistency and design excellence from the heart of Morbi.</p>
         <div class="features">
             <div class="feature"><h4>Premium Quality</h4><p>Strict quality control with low water absorption, high strength and stain resistance in every tile.</p></div>
-            <div class="feature"><h4>Wide Range</h4><p>600×1200 mm, 600×600 mm and 300×450 mm wall tiles in Glossy, Matt, High Glossy, Carving and Sugar finishes.</p></div>
+            <div class="feature"><h4>Wide Range</h4><p>3D, Craft and Fish collections in large-format 600×1200 mm for floors and feature walls.</p></div>
             <div class="feature"><h4>Modern Designs</h4><p>Marble, stone and contemporary looks created with advanced digital printing technology.</p></div>
             <div class="feature"><h4>Export Ready</h4><p>Reliable manufacturer and exporter serving projects across India and international markets.</p></div>
         </div>
@@ -154,10 +147,10 @@
         const productCards = document.querySelectorAll('.product-card');
         function filterBySize(size) {
             productCards.forEach(card => {
-                card.style.display = (card.dataset.size === size) ? 'block' : 'none';
+                card.style.display = (size === 'all' || card.dataset.size === size) ? 'block' : 'none';
             });
         }
-        filterBySize('600x1200');
+        filterBySize('all');
         sizeBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
